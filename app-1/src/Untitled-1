@@ -1,0 +1,86 @@
+  constructor(){
+    super();
+  
+    this.state = {
+      foods: [
+        "avocados",
+        "cheese",
+        "pineapple",
+        "salmon",
+        "chocolate"
+      ]
+    }
+  }
+  render() {
+    let foodsToDisplay = this.state.foods.map(( e, i) => {
+      return (
+        < h2 key={ i} > {e} </h2>
+      )
+    })
+    return (
+      <div className="App">
+        {foodsToDisplay}
+
+
+
+        onstructor(){
+    super();
+
+    this.state = {
+      filterString: " ",
+      foods: [
+        "avocados",
+        "cheese",
+        "pineapple",
+        "salmon",
+        "chocolate"
+      ]
+    }
+  }
+
+  handleChange ( filter ){
+    this.setState({filterString: filter})
+  }
+
+  render() {
+    let foodsToDisplay = this.state.foods.filter(( e ,i ) => {
+      return e.includes(this.state.filterString);
+    }) .map((e, i)=> {
+      return <h2 key={i}>{e}</h2>
+    })
+    return (
+      <div className="App">
+      <input onChange={ (e)=> this.handleChange(e.target.value)} type="text"/>
+        { foodsToDisplay }
+      </div>
+
+      onstructor(){
+    super();
+
+    this.state = {
+      filterString: " ",
+      foods: [
+        "avocados",
+        "cheese",
+        "pineapple",
+        "salmon",
+        "chocolate"
+      ]
+    }
+  }
+
+  handleChange ( filter ){
+    this.setState({filterString: filter})
+  }
+
+  render() {
+    let foodsToDisplay = this.state.foods.filter(( e ,i ) => {
+      return e.includes(this.state.filterString);
+    }) .map((e, i)=> {
+      return <h2 key={i}>{e}</h2>
+    })
+    return (
+      <div className="App">
+      <input onChange={ (e)=> this.handleChange(e.target.value)} type="text"/>
+        { foodsToDisplay }
+      </div>

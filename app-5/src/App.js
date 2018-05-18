@@ -1,30 +1,13 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import './App.css'
+import Image from './image.js'
 
-class App extends Component {
- constructor() {
-    super();
-
-
-    this.state = {
-      message: " ",
-
-    }
-  }
-
-  handleChange( value){
-    this.setState ({ message: value})
-  }
-
-  render() {
-    return (
-      <div className="App">
-      <input onChange={ (e) => this.handleChange( e.target.value)} type="text"/>
-       <p> { this.state.message } </p>
+class App extends Component{
+  return(
+    <div className="App">
+      <Image myImage={'https://http.cat/409'}/>
       </div>
-    );
-  }
+  )
 }
 
 export default App;

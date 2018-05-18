@@ -19,7 +19,7 @@ class App extends Component {
   }
 
   handleChange ( filter ){
-    this.setState({filterString: filter})
+    this.setState({filterString: filter});
   }
 
   render() {
